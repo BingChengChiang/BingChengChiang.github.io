@@ -364,7 +364,7 @@
     </li>
   </ul>
 
-  <p>Current Time is<span id="datetime"> </span></p>
+  <p>"Current Time is" <span id="datetime"> </span></p>
   <script language="JavaScript">
     function Real_Time() {
       var dt = new Date();
@@ -376,7 +376,7 @@
       var ss = ("0" + dt.getSeconds()).slice(-2);
 
       document.getElementById("datetime").innerHTML = MM + "/" + DD + "/" + YYYY + " " + hh + ":" + mm + ":" + ss;
-      setTimeout('Real_Time()', 1000);
+      setInterval(Real_Time, 1000);
     }
   </script>
 
