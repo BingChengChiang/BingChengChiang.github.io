@@ -364,7 +364,8 @@
     </li>
   </ul>
 
-  <script language="Javascript">
+  <p>Current Time is<span id="datetime"> </span></p>
+  <script language="JavaScript">
     function Real_Time() {
       var dt = new Date();
       var MM = ("0" + (dt.getMonth() + 1)).slice(-2);
@@ -374,14 +375,12 @@
       var mm = ("0" + dt.getMinutes()).slice(-2);
       var ss = ("0" + dt.getSeconds()).slice(-2);
 
-      document.getElementById("datetime").innerHTML =
-        MM + "/" + DD + "/" + YYYY + " " + hh + ":" + mm + ":" + ss;
-
+      document.getElementById("datetime").innerHTML = MM + "/" + DD + "/" + YYYY + " " + hh + ":" + mm + ":" + ss;
       setTimeout('Real_Time()', 1000);
     }
   </script>
 
-  <p>Current Time <span id="datetime"></span></p>
+
 </body>
 
 
